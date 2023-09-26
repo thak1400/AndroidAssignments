@@ -2,5 +2,12 @@
 <resources>
 <string name="app_name">AndroidAssignments</string>
 <string name="hello_message">ਸਤ ਸ੍ਰੀ ਅਕਾਲ!</string>
-    <string name="ButtonText">I\'m a button</string>
+    <string name="ButtonText">ਮੈਂ ਇੱਕ ਬਟਨ ਹਾਂ</string>
+    <string name="text_Login">ਲਾਗਿਨ</string>
+    <string name="template_Login_Text">ਲੌਗਇਨ ਨਾਮ</string>
+    <string name="text_Password">ਪਾਸਵਰਡ</string>
+    <string name="template_Password_Text">ਇੱਥੇ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ</string>
+    <string name="radio_Button_Text">ਰੇਡੀਓ ਬਟਨ</string>
+    <string name="check_Box_Text">ਚੈੱਕ ਬਾਕਸ</string>
+    <string name="switch_Text">ਇਹ ਕੀ ਕਰਦਾ ਹੈ?</string>
 </resources>
