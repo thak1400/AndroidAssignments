@@ -9,4 +9,15 @@
     <string name="radio_Button_Text">RadioButton</string>
     <string name="check_Box_Text">CheckBox</string>
     <string name="switch_Text">What does this do?</string>
+    <string name="login_Button_Text">Login</string>
+    <string name="password_Toast">Please enter a password</string>
+    <string name="email_Toast">Please enter a valid email</string>
+    <string name="dialog_message">Do you wish to go back?</string>
+    <string name="dialog_title">Finish</string>
+    <string name="ok">YES</string>
+    <string name="cancel">NO</string>
+    <string name="switch_On">Switch is on</string>
+    <string name="switch_Off">Switch is off</string>
+    <string name="response">"ListItemsActivity passed: My information to share"</string>
+    <string name="here_is_my_response">Here is my response</string>
 </resources>

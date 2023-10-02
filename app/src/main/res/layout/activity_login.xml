@@ -10,21 +10,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="@string/text_Login" />
 
     <EditText
+        android:id="@+id/login_email_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/template_Login_Text" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_Password" />
 
     <EditText
+        android:id="@+id/password_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:hint="@string/template_Password_Text"/>
 
+    <Button
+        android:id="@+id/button_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="295dp"
+        android:text="@string/login_Button_Text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </LinearLayout>

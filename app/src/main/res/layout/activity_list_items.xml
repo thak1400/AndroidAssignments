@@ -20,6 +20,7 @@
     </RadioButton>
 
     <CheckBox
+        android:id="@+id/checkbox_Button"
         android:layout_width="wrap_content"
         android:text="@string/check_Box_Text"
         android:layout_columnWeight="1"
@@ -27,13 +28,17 @@
     </CheckBox>
 
     <Switch
+        android:id="@+id/switch_Button"
         android:text="@string/switch_Text"
         android:layout_width="wrap_content"
         android:layout_columnWeight="1"
         android:gravity="fill">
     </Switch>
 
-    <ImageButton android:src="@android:drawable/ic_menu_camera"
+
+    <ImageButton
+        android:id="@+id/button_Img"
+        android:src="@android:drawable/ic_menu_camera"
         android:layout_columnWeight="1"
         android:gravity="fill">
 

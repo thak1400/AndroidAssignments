@@ -10,4 +10,15 @@
     <string name="radio_Button_Text">ਰੇਡੀਓ ਬਟਨ</string>
     <string name="check_Box_Text">ਚੈੱਕ ਬਾਕਸ</string>
     <string name="switch_Text">ਇਹ ਕੀ ਕਰਦਾ ਹੈ?</string>
+    <string name="login_Button_Text">ਲਾਗਿਨ</string>
+    <string name="password_Toast">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਪਾਸਵਰਡ ਦਾਖਲ ਕਰੋ</string>
+    <string name="email_Toast">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਾਖਲ ਕਰੋ</string>
+    <string name="dialog_title">ਸਮਾਪਤ</string>
+    <string name="dialog_message">ਕੀ ਤੁਸੀਂ ਵਾਪਸ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="ok">ਹਾਂ</string>
+    <string name="cancel">ਸੰ</string>
+    <string name="switch_On">ਸਵਿੱਚ ਚਾਲੂ ਹੈ</string>
+    <string name="switch_Off">ਸਵਿੱਚ ਬੰਦ ਹੈ</string>
+    <string name="response">ਸੂਚੀ ਆਈਟਮ ਗਤੀਵਿਧੀ ਪਾਸ ਕੀਤੀ ਗਈ: ਸਾਂਝੀ ਕਰਨ ਲਈ ਮੇਰੀ ਜਾਣਕਾਰੀ</string>
+    <string name="here_is_my_response">ਇੱਥੇ ਮੇਰਾ ਜਵਾਬ ਹੈ</string>
 </resources>
