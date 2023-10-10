@@ -1,5 +1,6 @@
 package com.code.wlu.abdulrahman.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -42,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast toast=Toast.makeText(LoginActivity.this,R.string.email_Toast,duration);
                     toast.show();
                 }
-                else if(fetched_Password.isEmpty()) {
+                else if(validatePwd(fetched_Password)) {
                     int duration= Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(LoginActivity.this,R.string.password_Toast,duration);
                     toast.show();
@@ -67,8 +68,20 @@ public class LoginActivity extends AppCompatActivity {
     protected boolean validateEmailId(String email){
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
+    protected  static boolean validatePwd(String str)
+    {
+        if(str.isEmpty())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     protected void onStart() {
         Log.i(Activity_Name,"On Start called");
+        Log.i(Activity_Name,LoginActivity.class.getName());
         super.onStart();
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="app_name">AndroidAssignments</string>
+<string name="app_name">ਅਸਾਈਨਮੈਂਟਸ</string>
 <string name="hello_message">ਸਤ ਸ੍ਰੀ ਅਕਾਲ!</string>
     <string name="ButtonText">ਮੈਂ ਇੱਕ ਬਟਨ ਹਾਂ</string>
     <string name="text_Login">ਲਾਗਿਨ</string>
@@ -21,4 +21,10 @@
     <string name="switch_Off">ਸਵਿੱਚ ਬੰਦ ਹੈ</string>
     <string name="response">ਸੂਚੀ ਆਈਟਮ ਗਤੀਵਿਧੀ ਪਾਸ ਕੀਤੀ ਗਈ: ਸਾਂਝੀ ਕਰਨ ਲਈ ਮੇਰੀ ਜਾਣਕਾਰੀ</string>
     <string name="here_is_my_response">ਇੱਥੇ ਮੇਰਾ ਜਵਾਬ ਹੈ</string>
+    <string name="start_Chat_Button">ਚੈਟ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="send_Button_Text">ਭੇਜੋ</string>
+    <string name="chat_Row_Text_View_Out">ਨਵਾਂ ਟੈਕਸਟ</string>
+    <string name="chat_Row_Text_View_Inc">ਨਵਾਂ ਟੈਕਸਟ</string>
+    <string name="emptyMsg">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਸੁਨੇਹਾ ਦਾਖਲ ਕਰੋ</string>
+    <string name="testMessage">ਇਹ ਇੱਕ ਟੈਸਟ ਸੁਨੇਹਾ ਹੈ</string>
 </resources>

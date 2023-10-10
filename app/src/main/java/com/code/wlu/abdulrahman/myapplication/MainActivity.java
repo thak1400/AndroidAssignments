@@ -1,17 +1,19 @@
 package com.code.wlu.abdulrahman.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
+    Button button, start_Chat;
     private String Activity_Name="Main Activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +21,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(Activity_Name,"On Create called");
         button=findViewById(R.id.button);
+        start_Chat=findViewById(R.id.start_Chat);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent,10);
+            }
+        });
+
+        start_Chat.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Log.i(Activity_Name,"User clicked Start Chat button");
+                Intent intent = new Intent(MainActivity.this,ChatWindow.class);
+                startActivityForResult(intent,5);
             }
         });
     }
@@ -44,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void onStart() {
         Log.i(Activity_Name,"On Start called");
+        Log.i(Activity_Name,MainActivity.class.getName());
         super.onStart();
     }
 
@@ -71,4 +86,5 @@ public class MainActivity extends AppCompatActivity {
         Log.i(Activity_Name,"On destroy called");
         super.onDestroy();
     }
+
 }

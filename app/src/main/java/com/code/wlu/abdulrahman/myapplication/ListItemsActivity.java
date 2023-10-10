@@ -1,5 +1,6 @@
 package com.code.wlu.abdulrahman.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
@@ -11,6 +12,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -135,4 +137,5 @@ public class ListItemsActivity extends AppCompatActivity {
         Log.i(Activity_Name,"On destroy called");
         super.onDestroy();
     }
+
 }

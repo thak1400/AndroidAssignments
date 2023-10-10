@@ -20,4 +20,10 @@
     <string name="switch_Off">Switch is off</string>
     <string name="response">"ListItemsActivity passed: My information to share"</string>
     <string name="here_is_my_response">Here is my response</string>
+    <string name="start_Chat_Button">Start Chat</string>
+    <string name="send_Button_Text">Send</string>
+    <string name="chat_Row_Text_View_Out">New Text</string>
+    <string name="chat_Row_Text_View_Inc">New Text</string>
+    <string name="emptyMsg">Please enter a message</string>
+    <string name="testMessage">This is a test message</string>
 </resources>
