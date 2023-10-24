@@ -27,4 +27,21 @@
     <string name="chat_Row_Text_View_Inc">ਨਵਾਂ ਟੈਕਸਟ</string>
     <string name="emptyMsg">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਸੁਨੇਹਾ ਦਾਖਲ ਕਰੋ</string>
     <string name="testMessage">ਇਹ ਇੱਕ ਟੈਸਟ ਸੁਨੇਹਾ ਹੈ</string>
+    <string name="title_activity_test_toolbar">ਟੈਸਟ ਟੂਲਬਾਰ</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">ਪਹਿਲਾ ਟੁਕੜਾ</string>
+    <string name="second_fragment_label">ਦੂਜਾ ਟੁਕੜਾ</string>
+    <string name="next">ਅਗਲਾ</string>
+    <string name="previous">ਪਿਛਲਾ</string>
+    <string name="test_Toolbar">ਟੈਸਟ ਟੂਲਬਾਰ</string>
+    <string name="lorem_ipsum">ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ</string>
+    <string name="version">ਸੰਸਕਰਣ 1 ਦੁਆਰਾ </string>
+    <string name="devName"> ਵੈਭਵ ਠਾਕੁਰ</string>
+    <string name="emailSnackString">ਈਮੇਲ ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ</string>
+    <string name="toolbarMenuSnackItem1">ਤੁਸੀਂ ਮੀਨੂ ਆਈਟਮ 1 ਨੂੰ ਚੁਣਿਆ ਹੈ</string>
+    <string name="toolbarMenuSnackItem2">ਤੁਸੀਂ ਮੀਨੂ ਆਈਟਮ 2 ਨੂੰ ਚੁਣਿਆ ਹੈ</string>
+    <string name="toolbarMenuSnackItem3">ਤੁਸੀਂ ਮੀਨੂ ਆਈਟਮ 3 ਨੂੰ ਚੁਣਿਆ ਹੈ</string>
+    <string name="toolbarMenuItem2Dialog">ਕੀ ਤੁਸੀਂ ਵਾਪਸ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="messageDialogHint">ਨਵੇਂ ਸੁਨੇਹੇ</string>
+    <string name="aboutMenu">ਬਾਰੇ</string>
 </resources>

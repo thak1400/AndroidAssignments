@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends MainActivity {
     private String Activity_Name="Login Activity";
     Button login_Button;
     EditText login_email;
