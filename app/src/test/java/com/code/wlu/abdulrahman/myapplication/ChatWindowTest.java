@@ -24,4 +24,9 @@ public class ChatWindowTest {
     {
         assertFalse(ChatWindow.class.getClass().isArray());
     }
+
+    public void validateActivityName()
+    {
+        assertTrue(ChatWindow.validateActivityName("ChatWindow"));
+    }
 }

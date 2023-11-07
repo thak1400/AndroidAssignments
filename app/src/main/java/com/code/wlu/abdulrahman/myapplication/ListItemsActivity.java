@@ -26,12 +26,12 @@ public class ListItemsActivity extends AppCompatActivity {
     ImageButton img_Button;
     CheckBox checkbox_Button;
     Switch switch_Button;
-    private String Activity_Name="ListItemsActivity Activity";
+    private static String ACTIVITY_NAME="ListItemsActivity Activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_items);
-        Log.i(Activity_Name,"On Create called");
+        Log.i(ACTIVITY_NAME,"On Create called");
         img_Button=findViewById(R.id.button_Img);
         switch_Button=findViewById(R.id.switch_Button);
         checkbox_Button=findViewById(R.id.checkbox_Button);
@@ -99,7 +99,7 @@ public class ListItemsActivity extends AppCompatActivity {
         toast.show();
     }
     protected void onStart() {
-        Log.i(Activity_Name,"On Start called");
+        Log.i(ACTIVITY_NAME,"On Start called");
         super.onStart();
     }
 
@@ -114,28 +114,43 @@ public class ListItemsActivity extends AppCompatActivity {
     }
 
     protected void onRestart() {
-        Log.i(Activity_Name,"On Restart called");
+        Log.i(ACTIVITY_NAME,"On Restart called");
         super.onRestart();
     }
 
     protected void onResume() {
-        Log.i(Activity_Name,"On Resume called");
+        Log.i(ACTIVITY_NAME,"On Resume called");
         super.onResume();
     }
 
     protected void onPause() {
-        Log.i(Activity_Name,"On Pause called");
+        Log.i(ACTIVITY_NAME,"On Pause called");
         super.onPause();
     }
 
     protected void onStop() {
-        Log.i(Activity_Name,"On Stop called");
+        Log.i(ACTIVITY_NAME,"On Stop called");
         super.onStop();
     }
 
     protected void onDestroy() {
-        Log.i(Activity_Name,"On destroy called");
+        Log.i(ACTIVITY_NAME,"On destroy called");
         super.onDestroy();
     }
 
+    public static boolean validateActivityName(String actName)
+    {
+        return actName.equals(ACTIVITY_NAME);
+    }
+
+
+    public static boolean strLeng(String str)
+    {
+        boolean flag=false;
+        if(str.length()>0)
+        {
+            flag= true;
+        }
+        return flag;
+    }
 }

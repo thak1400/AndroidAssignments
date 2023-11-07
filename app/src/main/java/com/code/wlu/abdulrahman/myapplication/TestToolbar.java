@@ -33,6 +33,7 @@ public class TestToolbar extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityTestToolbarBinding binding;
 
+    private static String ACTIVITY_NAME="TestToolbar";
     EditText messageDialog;
     String message;
     @Override
@@ -78,9 +79,14 @@ public class TestToolbar extends AppCompatActivity {
     {
         SharedPreferences prefs = getSharedPreferences("dialog_Messages",0);
         String defaultDialogMessage= prefs.getString("DialogMessage",getResources().getString(R.string.toolbarMenuSnackItem1));
+//        int id=mi.getItemId();
+//        switch (id){
+//            case R.id.action_one:
+//
+//        }
         if(mi.getItemId() == R.id.action_one) {
             Log.d("Toolbar", "Option 1 selected");
-                Snackbar.make(findViewById(R.id.action_one), defaultDialogMessage, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(findViewById(R.id.action_one), defaultDialogMessage, Snackbar.LENGTH_LONG).show();
         }
         else if (mi.getItemId() == R.id.action_two) {
             Log.d("Toolbar", "Option 2 selected");
@@ -130,7 +136,7 @@ public class TestToolbar extends AppCompatActivity {
         return true;
     }
 
-    protected boolean validateDialogInput(String input)
+    protected static boolean validateDialogInput(String input)
     {
         if(!input.isEmpty())
         {
@@ -139,5 +145,10 @@ public class TestToolbar extends AppCompatActivity {
         else{
             return false;
         }
+    }
+
+    public static boolean validateActivityName(String actName)
+    {
+        return actName.equals(ACTIVITY_NAME);
     }
 }

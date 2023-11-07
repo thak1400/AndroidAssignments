@@ -14,12 +14,12 @@ import android.widget.Toast;
 
 public class MainActivity extends ChatWindow {
     Button button, start_Chat, test_Toolbar;
-    private String Activity_Name="Main Activity";
+    private static String ACTIVITY_NAME="Main Activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i(Activity_Name,"On Create called");
+        Log.i(ACTIVITY_NAME,"On Create called");
         button=findViewById(R.id.button);
         start_Chat=findViewById(R.id.start_Chat);
         test_Toolbar=findViewById(R.id.test_Toolbar);
@@ -37,7 +37,7 @@ public class MainActivity extends ChatWindow {
             @Override
             public void onClick(View view)
             {
-                Log.i(Activity_Name,"User clicked Start Chat button");
+                Log.i(ACTIVITY_NAME,"User clicked Start Chat button");
                 Intent intent = new Intent(MainActivity.this,ChatWindow.class);
                 startActivityForResult(intent,5);
             }
@@ -46,7 +46,7 @@ public class MainActivity extends ChatWindow {
         test_Toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(Activity_Name,"User clicked Test Toolbar button");
+                Log.i(ACTIVITY_NAME,"User clicked Test Toolbar button");
                 Intent intent = new Intent(MainActivity.this,TestToolbar.class);
                 startActivityForResult(intent,6);
             }
@@ -68,34 +68,39 @@ public class MainActivity extends ChatWindow {
         }
     }
     protected void onStart() {
-        Log.i(Activity_Name,"On Start called");
-        Log.i(Activity_Name,MainActivity.class.getName());
+        Log.i(ACTIVITY_NAME,"On Start called");
+        Log.i(ACTIVITY_NAME,MainActivity.class.getName());
         super.onStart();
     }
 
     protected void onRestart() {
-        Log.i(Activity_Name,"On Restart called");
+        Log.i(ACTIVITY_NAME,"On Restart called");
         super.onRestart();
     }
 
     protected void onResume() {
-        Log.i(Activity_Name,"On Resume called");
+        Log.i(ACTIVITY_NAME,"On Resume called");
         super.onResume();
     }
 
     protected void onPause() {
-        Log.i(Activity_Name,"On Pause called");
+        Log.i(ACTIVITY_NAME,"On Pause called");
         super.onPause();
     }
 
     protected void onStop() {
-        Log.i(Activity_Name,"On Stop called");
+        Log.i(ACTIVITY_NAME,"On Stop called");
         super.onStop();
     }
 
     protected void onDestroy() {
-        Log.i(Activity_Name,"On destroy called");
+        Log.i(ACTIVITY_NAME,"On destroy called");
         super.onDestroy();
+    }
+
+    public static boolean validateActivityName(String actName)
+    {
+        return actName.equals(ACTIVITY_NAME);
     }
 
 }

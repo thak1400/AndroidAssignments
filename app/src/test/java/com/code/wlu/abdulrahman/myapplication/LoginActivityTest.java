@@ -26,4 +26,10 @@ public class LoginActivityTest {
     {
         assertFalse(LoginActivity.class.isArray());
     }
+
+    @Test
+    public void validateActivityName()
+    {
+        assertTrue(LoginActivity.validateActivityName("LoginActivity"));
+    }
 }

@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends MainActivity {
-    private String Activity_Name="Login Activity";
+    private static String ACTIVITY_NAME="Login Activity";
     Button login_Button;
     EditText login_email;
     EditText password_text;
@@ -22,7 +22,7 @@ public class LoginActivity extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Log.i(Activity_Name,"On Create called");
+        Log.i(ACTIVITY_NAME,"On Create called");
         login_email=findViewById(R.id.login_email_text);
         login_Button=findViewById(R.id.button_Login);
         password_text=findViewById(R.id.password_text);
@@ -80,33 +80,38 @@ public class LoginActivity extends MainActivity {
         }
     }
     protected void onStart() {
-        Log.i(Activity_Name,"On Start called");
-        Log.i(Activity_Name,LoginActivity.class.getName());
+        Log.i(ACTIVITY_NAME,"On Start called");
+        Log.i(ACTIVITY_NAME,LoginActivity.class.getName());
         super.onStart();
     }
 
     protected void onRestart() {
-        Log.i(Activity_Name,"On Restart called");
+        Log.i(ACTIVITY_NAME,"On Restart called");
         super.onRestart();
     }
 
     protected void onResume() {
-        Log.i(Activity_Name,"On Resume called");
+        Log.i(ACTIVITY_NAME,"On Resume called");
         super.onResume();
     }
 
     protected void onPause() {
-        Log.i(Activity_Name,"On Pause called");
+        Log.i(ACTIVITY_NAME,"On Pause called");
         super.onPause();
     }
 
     protected void onStop() {
-        Log.i(Activity_Name,"On Stop called");
+        Log.i(ACTIVITY_NAME,"On Stop called");
         super.onStop();
     }
 
     protected void onDestroy() {
-        Log.i(Activity_Name,"On destroy called");
+        Log.i(ACTIVITY_NAME,"On destroy called");
         super.onDestroy();
+    }
+
+    public static boolean validateActivityName(String actName)
+    {
+        return actName.equals(ACTIVITY_NAME);
     }
 }

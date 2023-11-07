@@ -1,12 +1,19 @@
 package com.code.wlu.abdulrahman.myapplication;
 
+import static com.code.wlu.abdulrahman.myapplication.ChatDatabaseHelper.KEY_MESSAGE;
+import static com.code.wlu.abdulrahman.myapplication.ChatDatabaseHelper.TABLE_NAME;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,13 +32,17 @@ import java.util.ArrayList;
 
 public class ChatWindow extends AppCompatActivity {
     Button send_Button;
+    static String ACTIVITY_NAME="ChatWindow";
     ListView list_View;
     EditText chat_Edit_Text;
 
-
+    ChatDatabaseHelper chatDBHelp=new ChatDatabaseHelper(this);
+    private SQLiteDatabase db;
     public ArrayList<String> chats_Arr_List=new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
         send_Button=findViewById(R.id.send_Button);
@@ -40,12 +51,36 @@ public class ChatWindow extends AppCompatActivity {
 
         ChatAdapter messageAdapter =new ChatAdapter( this );
         list_View.setAdapter (messageAdapter);
+
+        db=chatDBHelp.getWritableDatabase();
+
+        String addAllQuery = "SELECT * FROM "+chatDBHelp.TABLE_NAME;
+        Cursor cursor = db.rawQuery(addAllQuery,null);
+        Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + cursor.getColumnCount() );
+
+        while(cursor.moveToNext()){
+            String msg=cursor.getString(cursor.getColumnIndexOrThrow("Msgs"));
+            chats_Arr_List.add(msg);
+            messageAdapter.notifyDataSetChanged();
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE:"+cursor.getString(cursor.getColumnIndexOrThrow("Msgs")) );
+        }
+        while(!cursor.isAfterLast() ) {
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE:"+cursor.getString(cursor.getColumnIndexOrThrow("Msgs")) );
+        }
+        for(int v=0;v<cursor.getColumnCount();v++)
+        {
+            Log.i(ACTIVITY_NAME, "Column Name: "+cursor.getColumnName(v) );
+        }
+        cursor.close();
         send_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String sent_Text = String.valueOf(chat_Edit_Text.getText());
                 if(!validateInputMessage(sent_Text))
                 {
+                    ContentValues values=new ContentValues();
+                    values.put(KEY_MESSAGE,sent_Text);
+                    db.insert(TABLE_NAME,null,values);
                     chats_Arr_List.add(sent_Text);
                     messageAdapter.notifyDataSetChanged();
                     chat_Edit_Text.setText("");
@@ -60,6 +95,10 @@ public class ChatWindow extends AppCompatActivity {
 
             }
         });
+    }
+    protected void onDestroy() {
+        Log.i(ACTIVITY_NAME,"On destroy called");
+        super.onDestroy();
     }
     protected static boolean validateInputMessage(String msg)
     {
@@ -111,6 +150,11 @@ public class ChatWindow extends AppCompatActivity {
             }
 
         }
+    }
+
+    public static boolean validateActivityName(String actName)
+    {
+        return actName.equals(ACTIVITY_NAME);
     }
 
 }

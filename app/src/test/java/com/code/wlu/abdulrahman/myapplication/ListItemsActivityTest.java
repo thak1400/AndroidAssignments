@@ -23,5 +23,10 @@ public class ListItemsActivityTest {
             assertFalse(ListItemsActivity.class.isPrimitive());
         }
 
+    @Test
+    public void strLeng()
+    {
+        assertTrue(ListItemsActivity.strLeng("abc"));
+    }
 
 }
