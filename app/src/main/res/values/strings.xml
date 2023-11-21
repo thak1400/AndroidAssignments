@@ -43,4 +43,7 @@
     <string name="toolbarMenuItem2Dialog">Do you want to go back?</string>
     <string name="messageDialogHint">New Messages</string>
     <string name="aboutMenu">About</string>
+    <string name="weather_Button">Weather Forecast</string>
+    <string name="select_city">Please select a city</string>
+    <string name="delete_this_message">Delete this message?</string>
 </resources>

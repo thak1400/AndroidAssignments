@@ -44,4 +44,7 @@
     <string name="toolbarMenuItem2Dialog">ਕੀ ਤੁਸੀਂ ਵਾਪਸ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="messageDialogHint">ਨਵੇਂ ਸੁਨੇਹੇ</string>
     <string name="aboutMenu">ਬਾਰੇ</string>
+    <string name="weather_Button">ਮੋਸਮ ਪੂਰਵ ਜਾਣਕਾਰੀ</string>
+    <string name="select_city">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਸ਼ਹਿਰ ਚੁਣੋ</string>
+    <string name="delete_this_message">ਕੀ ਇਹ ਸੁਨੇਹਾ ਮਿਟਾਉਣਾ ਹੈ?</string>
 </resources>

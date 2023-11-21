@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="CAN">
+        <item>Ottawa</item>
+        <item>Toronto</item>
+        <item>Calgary</item>
+        <item>Edmonton</item>
+        <item>Ontario</item>
+    </string-array>
+</resources>

@@ -8,6 +8,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
+    private static ChatDatabaseHelper sInstance;
     static String DATABASE_NAME="Messages.db";
     public static String TABLE_NAME="Messages_Table";
     static String KEY_ID="id";
@@ -22,7 +23,12 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
-
+    public static synchronized ChatDatabaseHelper getInstance(Context context) {
+        if (sInstance == null) {
+            sInstance = new ChatDatabaseHelper(context.getApplicationContext());
+        }
+        return sInstance;
+    }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String create_Msgs_Table="CREATE TABLE "+ TABLE_NAME + "("

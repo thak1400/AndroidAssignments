@@ -9,20 +9,26 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends ChatWindow {
-    Button button, start_Chat, test_Toolbar;
+    Button button, start_Chat, test_Toolbar,weather_Button;
     private static String ACTIVITY_NAME="Main Activity";
+
+    Spinner spinCity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(ACTIVITY_NAME,"On Create called");
+        spinCity=findViewById(R.id.spinCity);
         button=findViewById(R.id.button);
         start_Chat=findViewById(R.id.start_Chat);
         test_Toolbar=findViewById(R.id.test_Toolbar);
+        weather_Button=findViewById(R.id.weather_Button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +58,33 @@ public class MainActivity extends ChatWindow {
             }
         });
 
+        weather_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME,"User clicked Weather Forecast button");
+                Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+
+                startActivityForResult(intent,6);
+
+            }
+        });
+
+        ArrayAdapter<CharSequence> arrAd=ArrayAdapter.createFromResource(this,R.array.CAN, android.R.layout.simple_spinner_item);
+        arrAd.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinCity.setAdapter(arrAd);
+
+        weather_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String city=spinCity.getSelectedItem().toString();
+                if(!city.isEmpty())
+                {
+                    Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
+                    intent.putExtra("SelectedCity",city);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     protected  void onActivityResult(int requestCode, int responseCode, Intent data) {
